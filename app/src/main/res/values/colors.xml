@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorAccent">#D81B60</color>
+
+    <!--Resources for Restaurant section-->
+    <color name="color_primary_restaurant">#FFC107</color>
+    <color name="color_primary_dark_restaurant">#FFA000</color>
+    <color name="color_accent_restaurant">#00BCD4</color>
+
+    <!--Resources for Malls section-->
+    <color name="color_primary_mall">#C8E6C9</color>
+    <color name="color_primary_dark_mall">#388E3C</color>
+    <color name="color_accent_mall">#FF4081</color>
+
+    <!--Resources for Parks section-->
+    <color name="color_primary_park">#009688</color>
+    <color name="color_primary_dark_park">#00796B</color>
+    <color name="color_accent_park">#CDDC39</color>
+</resources>
