@@ -12,4 +12,11 @@
         <item name="android:layout_gravity">center_vertical</item>
     </style>
 
+    <!--Styles based on category-->
+    <style name="ResturantCategory" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="colorPrimary">@color/color_primary_restaurant</item>
+        <item name="colorPrimaryDark">@color/color_primary_dark_restaurant</item>
+        <item name="colorAccent">@color/color_accent_restaurant</item>
+    </style>
+
 </resources>

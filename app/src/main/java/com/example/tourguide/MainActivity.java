@@ -1,5 +1,8 @@
 package com.example.tourguide;
 
+import android.app.Activity;
+import android.content.Intent;
+import android.content.res.Resources;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentStatePagerAdapter;
@@ -7,6 +10,10 @@ import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+
+import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
     private ViewPager mViewPager;
@@ -16,14 +23,14 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+//        ThemeUtil.onActivityCreateSetTheme(this);
         setContentView(R.layout.activity_main);
 
         mViewPager = findViewById(R.id.main_view_pager);
         mPagerAdapter = new CustomSlidePagerAdapter(getSupportFragmentManager());
         mViewPager.setAdapter(mPagerAdapter);
+//        setTheme(R.style.ResturantCategory);
     }
-
-
 
     private class CustomSlidePagerAdapter extends FragmentStatePagerAdapter {
         public CustomSlidePagerAdapter(FragmentManager fragmentManager){
@@ -32,8 +39,14 @@ public class MainActivity extends AppCompatActivity {
 
         @Override
         public Fragment getItem(int i) {
-            return new RestaurantFragment();
+            ArrayList<Fragment> fragments = new ArrayList<>();
+            fragments.add(new RestaurantFragment());
+            fragments.add(new MallFragment());
+
+            return fragments.get(i);
         }
+
+
 
         @Override
         public int getCount() {

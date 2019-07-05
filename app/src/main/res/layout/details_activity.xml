@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="8dp">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:src="@drawable/chinese_woks_koi_1" />
+
+        <TextView
+            android:id="@+id/name_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:textAppearanceLarge"
+            android:textStyle="bold"
+            tools:text="Some Name Here" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="@dimen/icon_dimen"
+                android:layout_height="@dimen/icon_dimen"
+                android:src="@drawable/ic_phone_black_48dp" />
+
+            <TextView
+                android:id="@+id/phone_number_textview"
+                style="@style/info_textview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                tools:text="09000000000" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="@dimen/icon_dimen"
+                android:layout_height="@dimen/icon_dimen"
+                android:src="@drawable/ic_access_time_black_48dp" />
+
+            <TextView
+                android:id="@+id/business_hours_textview"
+                style="@style/info_textview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                tools:text="8am to 10pm" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="8dp">
+
+            <ImageView
+                android:layout_width="@dimen/icon_dimen"
+                android:layout_height="@dimen/icon_dimen"
+                android:src="@drawable/ic_location_on_black_48dp"/>
+
+            <TextView
+                android:id="@+id/address_textview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                style="@style/info_textview"
+                tools:text="No 11, Mamba Street, Maitama. Abuja."/>
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>
