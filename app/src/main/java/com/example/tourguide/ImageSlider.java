@@ -32,7 +32,6 @@ public class ImageSlider extends Fragment {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         mResourceID = Integer.parseInt(getArguments().getString("imageID"));
-        Log.v("Im Res ID", String.valueOf(mResourceID));
     }
 
     @Nullable
@@ -43,7 +42,6 @@ public class ImageSlider extends Fragment {
         ImageView imageView = rootView.findViewById(R.id.image_viewfragment);
 
         imageView.setImageResource(mResourceID);
-
 
         return rootView;
     }

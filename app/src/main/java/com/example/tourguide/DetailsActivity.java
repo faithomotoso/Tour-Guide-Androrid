@@ -57,7 +57,6 @@ public class DetailsActivity extends AppCompatActivity {
         springIndicator.setViewPager(mImagePager);
 
 
-
         // updating the views
         TextView businessNameTextView = findViewById(R.id.name_textview);
         TextView phoneNumberTextView = findViewById(R.id.phone_number_textview);
@@ -79,11 +78,9 @@ public class DetailsActivity extends AppCompatActivity {
                 if (ContextCompat.checkSelfPermission(DetailsActivity.this, Manifest.permission.CALL_PHONE) != PackageManager.PERMISSION_GRANTED){
                     ActivityCompat.requestPermissions(DetailsActivity.this, new String[]{Manifest.permission.CALL_PHONE},
                             PHONE_CALL_PERMISSION);
-
                 } else {
                     startActivity(phoneCallIntent);
                 }
-
             }
         });
 
@@ -108,7 +105,6 @@ public class DetailsActivity extends AppCompatActivity {
                 startActivity(phoneCallIntent);
             }
         }
-
         super.onRequestPermissionsResult(requestCode, permissions, grantResults);
     }
 
@@ -120,14 +116,11 @@ public class DetailsActivity extends AppCompatActivity {
         @Override
         public int getCount() {
             return imageResourceID.length;
-//            return 2;
         }
 
         @Override
         public Fragment getItem(int i) {
             return ImageSlider.createInstance(imageResourceID[i]);
-//            return new ImageSlider();
-//            return null;
         }
 
         @Nullable

@@ -37,8 +37,6 @@ public class LandmarkAdapter extends ArrayAdapter<Landmark> {
         listItemImageView.setImageResource(landmark.getThumbnailID());
         listItemImageView.setScaleType(ImageView.ScaleType.CENTER_CROP);
 
-        // change theme based on section
-
         return convertView;
     }
 }

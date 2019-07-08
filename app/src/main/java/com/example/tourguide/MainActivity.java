@@ -26,7 +26,6 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-//        ThemeUtil.onActivityCreateSetTheme(this);
         setContentView(R.layout.activity_main);
 
         mViewPager = findViewById(R.id.main_view_pager);
@@ -35,33 +34,6 @@ public class MainActivity extends AppCompatActivity {
 
         TabLayout mainActivityTabLayout = findViewById(R.id.fragment_tablayout);
         mainActivityTabLayout.setupWithViewPager(mViewPager);
-
-        mViewPager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
-            @Override
-            public void onPageScrolled(int i, float v, int i1) {
-
-            }
-
-            @Override
-            public void onPageSelected(int i) {
-                switch (i){
-                    case 0:
-                        Log.v("Activity", "restaurant");
-                        break;
-
-                    case 1:
-                        Log.v("Activity", "malls");
-                        setTheme(R.style.ResturantCategory);
-                        break;
-                }
-            }
-
-            @Override
-            public void onPageScrollStateChanged(int i) {
-
-            }
-        });
-//        setTheme(R.style.ResturantCategory);
     }
 
     private class CustomSlidePagerAdapter extends FragmentStatePagerAdapter {
