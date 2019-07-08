@@ -53,6 +53,7 @@ public class RestaurantFragment extends Fragment {
                 detailsActivity.putExtra("Phone number", item.getPhoneNumber());
                 detailsActivity.putExtra("Address", item.getLocation());
                 detailsActivity.putExtra("Hours", item.getBusinessHours());
+                detailsActivity.putExtra("Images", item.getImageResourceID());
                 startActivity(detailsActivity);
             }
         });

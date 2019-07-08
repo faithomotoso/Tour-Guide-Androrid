@@ -2,7 +2,8 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -10,10 +11,26 @@
         android:orientation="vertical"
         android:padding="8dp">
 
-        <ImageView
+        <RelativeLayout
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            tools:src="@drawable/chinese_woks_koi_1" />
+            android:layout_height="wrap_content">
+
+            <android.support.v4.view.ViewPager
+                android:id="@+id/image_viewpager"
+                android:layout_width="wrap_content"
+                android:layout_height="400dp"/>
+
+            <github.chenupt.springindicator.SpringIndicator
+                android:id="@+id/spring_indicator"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                app:siTextSize="16sp"
+                app:siTextColor="@android:color/white"
+                app:siIndicatorColor="@color/colorPrimary"
+                app:siSelectedTextColor="@android:color/white"
+                app:siRadiusMax="10dp" />
+        </RelativeLayout>
+
 
         <TextView
             android:id="@+id/name_textview"
@@ -21,12 +38,13 @@
             android:layout_height="wrap_content"
             android:textAppearance="?android:textAppearanceLarge"
             android:textStyle="bold"
-            tools:text="Some Name Here" />
+            tools:text="Some Name Here"
+            android:layout_marginTop="16dp"/>
 
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
+            android:layout_marginTop="16dp"
             android:orientation="horizontal">
 
             <ImageView
@@ -46,7 +64,7 @@
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
+            android:layout_marginTop="16dp"
             android:orientation="horizontal">
 
             <ImageView
@@ -67,7 +85,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:layout_marginTop="8dp">
+            android:layout_marginTop="16dp">
 
             <ImageView
                 android:layout_width="@dimen/icon_dimen"
